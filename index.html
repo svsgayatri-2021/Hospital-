@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapido Order Form</title>
+    <style>
+        /* Basic CSS for styling the form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't increase width */
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Place Your Rapido Order</h2>
+        <form action="#" method="post">
+            <label for="pickupLocation">Pickup Location:</label>
+            <input type="text" id="pickupLocation" name="pickupLocation" required>
+
+            <label for="dropoffLocation">Drop-off Location:</label>
+            <input type="text" id="dropoffLocation" name="dropoffLocation" required>
+
+            <label for="vehicleType">Vehicle Type:</label>
+            <select id="vehicleType" name="vehicleType">
+                <option value="bike">Bike</option>
+                <option value="auto">Auto</option>
+                <option value="cab">Cab</option>
+            </select>
+
+            <label for="specialInstructions">Special Instructions (optional):</label>
+            <textarea id="specialInstructions" name="specialInstructions" rows="4"></textarea>
+
+            <input type="submit" value="Book Ride">
+        </form>
+    </div>
+</body>
+</html>
